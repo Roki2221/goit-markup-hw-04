@@ -101,8 +101,13 @@ img {
   padding: 24px 0;
   display: block;
   transition: color var(--transition);
-  position: relative;
 }
+
+.current {
+  position: relative;
+  color: var(--interactive-color);
+}
+
 .header-menu-item:hover {
   color: var(--interactive-color);
 }
@@ -115,7 +120,7 @@ img {
   color: var(--interactive-color);
 }
 
-.header-menu-item:active::after {
+.current::after {
   position: absolute;
   width: 100%;
   height: 4px;
@@ -530,6 +535,7 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
+  transition: opacity var(--transition), visibility var(--transition);
 }
 
 .modal {
@@ -542,8 +548,13 @@ img {
   border-radius: 4px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   padding: 24px;
+  transition: transform var(--transition);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .modal-btn {
