@@ -526,17 +526,6 @@ img {
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
   cursor: pointer;
-  transition: bpx-shadow var(--transition);
-}
-
-.portfolio-list-item:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.portfolio-list-item:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .overlay-container {
@@ -563,12 +552,27 @@ img {
   color: var(--footer-text-color);
 }
 
-.portfolio-list-item:hover .overlay {
+.link-app:hover .overlay {
   transform: translateY(0);
 }
 
-.portfolio-list-item:focus .overlay {
+.link-app:focus .overlay {
   transform: translateY(0);
+}
+
+.link-app {
+  display: block;
+  transition: box-shadow var(--transition);
+}
+
+.link-app:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.link-app:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .container-app {
