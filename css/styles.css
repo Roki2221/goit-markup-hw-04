@@ -156,6 +156,7 @@ img {
 }
 /* MAIN */
 .hero {
+  margin: 0 auto;
   background-color: var(--title-text-color);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -324,6 +325,8 @@ img {
 }
 
 .team-link-item {
+  width: 40px;
+  height: 40px;
 }
 
 .soc-link {
@@ -333,7 +336,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
   border-radius: 50%;
   transition: background-color var(--transition);
 }
