@@ -251,24 +251,21 @@ img {
 }
 
 .advantages-list-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 264px;
   height: 112px;
   background-color: var(--footer-text-color);
   position: relative;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .advantages-list-item {
   width: calc((100% - 3 * 24px) / 4);
 }
 
-.advantages-icon {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -333,7 +330,9 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--logo-blue);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px;
   border-radius: 50%;
   transition: background-color var(--transition);
@@ -345,6 +344,10 @@ img {
 }
 
 .soc-link:hover {
+  background-color: var(--interactive-color);
+}
+
+.soc-link:focus {
   background-color: var(--interactive-color);
 }
 
@@ -374,7 +377,7 @@ img {
   height: 100%;
   border: 1px solid var(--customer-color);
   border-radius: 4px;
-  transition: var(--transition);
+  transition: color var(--transition), border-color var(--transition);
   color: var(--customer-color);
 }
 
@@ -385,7 +388,7 @@ img {
 
 .customer-link:hover {
   color: var(--interactive-color);
-  border: 1px solid var(--interactive-color);
+  border-color: var(--interactive-color);
 }
 
 .customer-link:focus {
